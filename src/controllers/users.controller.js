@@ -1,5 +1,6 @@
 import User from "../models/User";
 import passport from "passport";
+import router from "../routes/notes.routes";
 
 export const renderSignUpForm = (req, res) => res.render("users/signup");
 
@@ -50,3 +51,6 @@ export const logout = (req, res) => {
   req.flash("success_msg", "You are logged out now.");
   res.redirect("/users/signin");
 };
+router.get('/hola', (req,res) => {
+    res.render("prueba");
+});
